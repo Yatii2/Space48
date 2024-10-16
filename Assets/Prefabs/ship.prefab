@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4577338927947959306}
   - component: {fileID: 8794260304170220016}
   - component: {fileID: 896679031009646393}
+  - component: {fileID: 4889856690313084844}
+  - component: {fileID: 2197990135686495842}
   m_Layer: 0
   m_Name: ship
   m_TagString: Untagged
@@ -78,11 +80,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rotationSpeed: 250
+--- !u!114 &4889856690313084844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708252833709529029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c85bd0199198244a328cc4032f4ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemImageHolder: {fileID: 0}
+  rotationSpeed: 25
+  moveSpeed: 5
+  cooldownTime: 3
+  messageField: {fileID: 0}
+--- !u!114 &2197990135686495842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708252833709529029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa22a1339d91714e9c63250def0af60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
   laserPrefab: {fileID: 6296192066327028313, guid: fb1761f4ca56baf4184f207a50c08d0a,
     type: 3}
-  cooldownTime: 1
-  itemImageHolder: {fileID: 0}
-  introductionField: {fileID: 0}
 --- !u!1001 &9044626916692821676
 PrefabInstance:
   m_ObjectHideFlags: 0

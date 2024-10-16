@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class ShipMovement : MonoBehaviour
 {
+
+   
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float rotationSpeed = 25f;
     
@@ -16,6 +18,8 @@ public class ShipMovement : MonoBehaviour
     {
         Move();   
         Rotate();
+   
+
     }
 
     void Move() {
@@ -27,8 +31,10 @@ public class ShipMovement : MonoBehaviour
     {
         transform.Rotate(transform.up * rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"));
     }
-   
+
+
     
+
 
     /*TO DO 
     
