@@ -9,14 +9,19 @@ using static UnityEditor.Progress;
 public class PickUp : MonoBehaviour
 {
     [SerializeField] private Image itemImageHolder;
-    [SerializeField] private float rotationSpeed = 25f;
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float cooldownTime = 3f;
     [SerializeField] private TMP_Text messageField;
 
+    private ShipMovement shipMovement;
+    private ShootFunction shootFunction;
 
     private List<Color> items = new List<Color>();
     private int activeItemIndex = -1;
+
+    void Start()
+    {
+        shipMovement = GetComponent<ShipMovement>();
+        shootFunction = GetComponent<ShootFunction>();
+    }
 
     IEnumerator ShowMessage(string message)
     {
@@ -84,17 +89,17 @@ public class PickUp : MonoBehaviour
             if (items[activeItemIndex] == Color.blue)
             {
                 StartCoroutine(ShowMessage(" +  Move Speed"));
-                moveSpeed += 5;
+                shipMovement.MoveSpeed += 5;
             }
             else if (items[activeItemIndex] == Color.red)
             {
                 StartCoroutine(ShowMessage(" + Fire Rate"));
-                cooldownTime -= 0.1f;
+                shootFunction.CooldownTime -= 0.1f;
             }
             else if (items[activeItemIndex] == Color.green)
             {
                 StartCoroutine(ShowMessage(" + Rotation Speed"));
-                rotationSpeed += 10;
+                shipMovement.RotationSpeed += 10;
             }
             items.RemoveAt(activeItemIndex);
             if (activeItemIndex > 0)

@@ -11,8 +11,19 @@ public class ShipMovement : MonoBehaviour
    
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float rotationSpeed = 25f;
-    
-    
+
+    public float MoveSpeed
+    {
+        get { return moveSpeed; }
+        set { moveSpeed = value; }
+    }
+
+    public float RotationSpeed
+    {
+        get { return rotationSpeed; }
+        set { moveSpeed = value; }
+    }
+
     // Update is called once per frame
     void Update()
     {

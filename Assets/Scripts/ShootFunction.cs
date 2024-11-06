@@ -7,6 +7,12 @@ public class ShootFunction : MonoBehaviour
     [SerializeField] private float cooldownTime = 3f;
     [SerializeField] private GameObject laserPrefab;
 
+
+    public float CooldownTime
+    {
+        get { return cooldownTime; }
+        set { cooldownTime = value; }
+    }
     private float cooldownCounter = 0f;
     void Start()
     {
